@@ -1,0 +1,79 @@
+input:focus,
+textarea:focus {
+  border-color: blue;
+  outline: none;
+}
+
+select:focus {
+  border-color: blue;
+  outline: none;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: green;
+}
+
+
+input:first-of-type {
+  border-radius: 10px;          
+  border-color: purple       
+}
+
+button {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #1e40af;
+  border-radius: 10px;
+  background: #1e3a8a;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  align-items: center;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+.radio-group legend {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+
+.radio-group input[type="radio"] {
+  accent-color: blue;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin: 0;
+}
+
+.radio-group input[type="radio"]:checked {
+  background-color: blue;      
+  border-color: blue;
+  box-shadow: 0 0 5px 2px blue; 
+  outline: none;
+}
+
+.radio-group input[type="radio"]:checked + label {
+  color: #1d4ed8;
+}
+
+/* Placeholder option styling for select */
+select:invalid { color: #6b7280; }
+select option[value=""] { color: #6b7280; }
