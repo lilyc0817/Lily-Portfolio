@@ -6,22 +6,22 @@
     <link rel="stylesheet" href="./styles.css">
     </head>
 <body>
-    <div class="welcome">
+    <div class="welcome" id="welcome">
     <h1>Lily Chen</h1>
-    <p>Welcome to my website! My name is Lily, and I'm knowledgable in HTML and CSS. I love to work with color palettes and fun designs. Feel free to hire me to make your website.</p>
+    <p>Welcome to my website! My name is Lily, and I'm knowledgable in HTML and CSS. I love to work with color palettes and fun designs. Feel free to hire me to make your website!</p>
     </div>
 
-    <div class="projects">
+    <div class="projects" id="projects">
         <h2>Sample Projects</h2>
         <a href ="./CSS 1 - Stylized To Do List/index.html">CSS 1 - Stylized To Do List</a>
         <a href ="./CSS 2 - Event Flyer/index.html">CSS 2 - Event Flyer</a>
         <a href ="./CSS 3 - Job Application Form/index.html">CSS 3 - Job Application Form</a>
         <a href ="./CSS 4 - Animation/index.html">CSS 4 - Animation</a>
-        <img href="./FlexBox-Zombies.png" alt="FlexBox Zombies"/>
+        <img src="./FlexBox-Zombies.png" alt="FlexBox Zombies"/>
 
     </div>
 
-    <div class="links">
+    <div class="links" id="links">
         <h2>Profiles</h2>
         <ul>
             <li><a href="https://github.com/lilyc0817">Github</a></li>
@@ -29,10 +29,19 @@
         </ul>
     </div>
 
+    <nav class="navbar">
+        <div class="logo">Lily Chen</div>
+        <ul class="nav-links">
+            <li><a href="#welcome">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#links">Contact</a></li>
+        </ul>
+        
+    </nav>
+    
     <!--Your personal portfolio is how you will showcase your learning in Full Stack Web Development.  It will transform in its design and its contents will change as we move through the course, but at the end of the first quarter, it should showcase the following projects:
 
-Screenshot of completion of Flexbox Zombies
-Screenshot that links to (at least) one of the FCC labs (Stylized To-Do List, Event Flyer, Job Application Form)
+
 Screenshot that link to Tribute Page (still to be completed, use a placeholder for now)
 Screenshot that link to Project Landing Page (still to be completed, use a placeholder for now)
     

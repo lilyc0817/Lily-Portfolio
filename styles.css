@@ -1,0 +1,36 @@
+.welcome{
+    height: 100vh;
+    width: 90vw;
+}
+.projects{
+    height: 100vh;
+    width: 90vw;
+}
+.links{
+    height: 100vh;
+}
+.navhome{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(17, 255, 0);
+  padding: 0;
+  height: 10vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(17, 255, 0);
+  padding: 0;
+  height: 10vh;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+img{
+    width: 70vw;
+    box-align: center;
+}
