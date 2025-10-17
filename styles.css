@@ -15,7 +15,8 @@
   align-items: center;
   background-color: rgb(17, 255, 0);
   padding: 0;
-  height: 10vh;
+  height: 7vh;
+  
 }
 .navbar {
   display: flex;
@@ -23,7 +24,7 @@
   align-items: center;
   background-color: rgb(17, 255, 0);
   padding: 0;
-  height: 10vh;
+  height: 7vh;
 }
 .nav-links a {
   color: white;
@@ -33,4 +34,58 @@
 img{
     width: 70vw;
     box-align: center;
+}
+
+/*(Desktops & Laptops)*/
+body {
+  font-size: 18px;
+  background-color: #f9fafc;
+}
+
+/*Medium screens (Tablets / small laptops) */
+@media (max-width: 992px) {
+  body {
+    font-size: 17px;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+/* Small screens (Phones in landscape or small tablets) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
+
+/*Extra-small screens (Phones in portrait) */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
 }
