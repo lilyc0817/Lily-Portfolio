@@ -19,6 +19,7 @@
     background-color: rgb(113, 231, 54);
     padding: 0;
     height: 7vh;
+    margin: 0;
 }
 .nav-links a {
     display: inline-block;
