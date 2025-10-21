@@ -1,6 +1,7 @@
 .welcome{
     height: 100vh;
     width: 90vw;
+    text-align: center;
 }
 .projects{
     height: 100vh;
@@ -9,37 +10,41 @@
 .links{
     height: 100vh;
 }
-.navhome{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(17, 255, 0);
-  padding: 0;
-  height: 7vh;
-  
-}
+
 .navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(17, 255, 0);
-  padding: 0;
-  height: 7vh;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    display: flex; 
+    background-color: rgb(113, 231, 54);
+    padding: 0;
+    height: 7vh;
 }
 .nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+    display: inline-block;
+    color: #ff2de3;
+    text-decoration: none;
+    font-weight: 500;
+}
+hr{
+    border-color:black;
 }
 img{
-    width: 70vw;
+    width: 97vw;
     box-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    border-color: aqua;
 }
-
+li{
+    display: inline-block;
+}
 /*(Desktops & Laptops)*/
 body {
   font-size: 18px;
-  background-color: #f9fafc;
+  background-color: #ff2de3;
+  font-family: papyrus;
 }
 
 /*Medium screens (Tablets / small laptops) */
