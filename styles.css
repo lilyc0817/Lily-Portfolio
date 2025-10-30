@@ -15,20 +15,15 @@ html {
 }
 .welcome, .projects, .links {
   width: 100%;
-  height: 100vh;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: rgb(255, 255, 255);
-  min-height: calc(100svh - var(--nav-h));
+  min-height: calc(100svh - var(--nav-h)); /* keep minimum full viewport, but allow extra */
+  height: auto; /* allow content (images) to expand the section */
   display: grid;
   place-items: center;
   text-align: center;
   padding: clamp(1.25rem, 4vw, 3rem) 1rem;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  
 }
 .welcome{
     scroll-margin-top: 80px;
@@ -81,17 +76,19 @@ a:hover {
 hr{
     border-color:black;
 }
+.flower-image{
+  width: auto;
+  max-width: 28rem; /* cap so it doesn't overflow very large screens */
+  height: auto;
+}
 img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-    box-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 50px;
-    border-color: rgb(201, 248, 248);
-    border-width: 10px;
-    border-style: solid;
+  max-width: 100%;
+  height: auto;            /* preserve aspect ratio */
+  display: block;
+  margin: 20px auto;      /* center and keep spacing */
+  border-radius: 50px;
+  border: 10px solid rgb(201, 248, 248);
+  box-sizing: border-box;
 }
 li{
     display: inline-block;
