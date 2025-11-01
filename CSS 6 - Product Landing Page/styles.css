@@ -32,6 +32,14 @@ img{
     justify-content: space-between;
     z-index: 1000;
     box-shadow: 10px 5px 5px rgb(132, 200, 243);}
+#endbar{
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(233, 188, 231);
+    box-shadow: 10px 5px 5px rgb(132, 200, 243);
+    sticky: bottom;
+}
 
 .nav-links a {
     list-style: none;
@@ -84,10 +92,43 @@ img{
 hr{
     border-color:black;
 }
-.profile-1{
+#about-page, #departments-page, #schedule-page, #people-page{
+    display: none;
 }
-.profile-2{
-}.profile-3{
-}.profile-4{
-}.profile-5{
+:target {
+  display: block;
+  scroll-margin-top: var(--nav-h); /* keep content visible below the sticky nav */
 }
+#about-page:target,
+#departments-page:target,
+#schedule-page:target,
+#people-page:target {
+  display: block;
+  scroll-margin-top: var(--nav-h); /* optional: keep content visible below sticky nav */
+}
+
+.page {
+  display: none;           /* hide all pages by default */
+}
+
+/* show the currently targeted page */
+.page:target {
+  display: block;
+  scroll-margin-top: var(--nav-h);
+}
+
+/* show home by default when there's no hash */
+#home-page {
+  display: block;
+}
+
+/* Hide home when any earlier target is activated
+   (requires #home-page to be after other .page elements in the DOM) */
+:target ~ #home-page {
+  display: none;
+}
+
+/* optional: make anchor navigation still snap below sticky nav */
+.page:target { scroll-margin-top: var(--nav-h); }
+
+/* ...existing code... */
