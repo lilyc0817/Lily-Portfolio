@@ -4,6 +4,10 @@ body{
     background: linear-gradient(to bottom right, #ffe6f2, #ffd1f2);
     line-height: 1.45;
 }
+
+html {
+  scroll-behavior: smooth;
+}
     
 img{
   max-width: 100%;
@@ -38,9 +42,25 @@ img{
     padding: 1rem;
     background-color: rgb(233, 188, 231);
     box-shadow: 10px 5px 5px rgb(132, 200, 243);
-    sticky: bottom;
 }
-
+.calendar {
+  width: 100%;
+  max-width: 600rem;
+  margin: 20px auto;
+  background: #ff18d1;
+  border-radius: 10px;
+  border: 2px solid #ff6ef1;
+}
+.calendar th, .calendar td {
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+}
+.calendar caption {
+  font-weight: bold;
+  padding: 10px;
+  color: #444;
+}
 .nav-links a {
     list-style: none;
     margin: 0;
@@ -74,6 +94,21 @@ img{
 .nav-links li{
     display: inline-block;
 }
+.departments-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-content: start;
+  margin-top: 0.5rem;
+}
+.departments-image img {
+  width: 90%;
+  height: auto;
+  display: block;
+  border-radius: 20px; /* keep existing rounded look */
+  margin: 0;
+}
 .enroll{
   display: inline-block;
   background-color: #ff2de3;
@@ -92,19 +127,19 @@ img{
 hr{
     border-color:black;
 }
-#about-page, #departments-page, #schedule-page, #people-page{
+#about-page, #departments-page, #schedule-page, #people-page, #testimony-page, #enroll-form, #thank-you-message {
     display: none;
 }
 :target {
   display: block;
-  scroll-margin-top: var(--nav-h); /* keep content visible below the sticky nav */
+  scroll-margin-top: var(--nav-h); /* keep content visible below the nav */
 }
 #about-page:target,
 #departments-page:target,
 #schedule-page:target,
-#people-page:target {
+#people-page:target, #testimony-page:target, #enroll-form:target, #thank-you-message:target {
   display: block;
-  scroll-margin-top: var(--nav-h); /* optional: keep content visible below sticky nav */
+  scroll-margin-top: var(--nav-h); 
 }
 
 .page {
@@ -117,13 +152,13 @@ hr{
   scroll-margin-top: var(--nav-h);
 }
 
-/* show home by default when there's no hash */
+/* show home by default*/
 #home-page {
   display: block;
 }
 
 /* Hide home when any earlier target is activated
-   (requires #home-page to be after other .page elements in the DOM) */
+*/
 :target ~ #home-page {
   display: none;
 }
@@ -131,4 +166,70 @@ hr{
 /* optional: make anchor navigation still snap below sticky nav */
 .page:target { scroll-margin-top: var(--nav-h); }
 
-/* ...existing code... */
+
+/*(Desktops & Laptops)*/
+
+
+/*Medium screens (Tablets / small laptops) */
+@media (max-width: 992px) {
+  body {
+    font-size: 17px;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+/* Small screens (Phones in landscape or small tablets) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
+@keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+text{
+    animation: blink 3s infinite;
+}
+
+/*Extra-small screens (Phones in portrait) */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+}

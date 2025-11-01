@@ -13,74 +13,184 @@
         <li><a href="#about-page">About</a></li>
         <li><a href="#departments-page">Departments</a></li>
         <li><a href="#schedule-page">Schedule</a></li>
-        <li><a href="#people-page">Faculty and Students</a></li>
-        <li><a href="https://www.google.com/" class="enroll">Enroll Now</a></li>
+        <li><a href="#people-page">Notable Faculty</a></li>
+        <li><a href="#testimony-page">Student Testimonies</a></li>
+        <li><a href="#enroll-form" class="enroll">Enroll Now</a></li>
       </ul>
     </nav>
 
-    
+    <div id="enroll-form">
+      <h2>Enroll Now</h2>
+      <form id="form" action="#thank-you-message" method="GET">
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        
+        <label for="email" id="email-label">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        
+        <label for="instrument" id="instrument-label">Instrument of Interest:</label>
+        <select id="instrument" name="instrument" required>
+          <option value="" disabled selected>Select an instrument</option>
+          <option value="piano">Piano</option>
+          <option value="violin">Violin</option>
+          <option value="voice">Voice</option>
+          <option value="saxophone">Saxophone</option>
+          <option value="guitar">Guitar</option>
+          <option value="drums">Drums</option>
+          <option value="other">Other</option>
+        </select>
+        
+        <button type="submit" id="submit">Submit</button>
+        
+        <p>Your first session is free upon enrollment! Check your email for updates regarding auditions and level-placement.</p>
+      </form>
+    </div>
+    <div id="thank-you-message">
+      <h2>Thank You for Enrolling!</h2>
+      <p>We appreciate your interest in Lily's Music Conservatory. Please check your email for updates regarding auditions and level-placement.
+      </p>
+    </div>
+
     <div id="about-page">
-      <h3>About Us: </h3>
+      <h2 id="benefits-title">Why choose LMC</h2>
       <p>At LMC, we are dedicated to nurturing musical talent and fostering a love for music in students of all ages. Our experienced faculty and comprehensive curriculum ensure that every student receives the highest quality education in a supportive environment.</p>
-      <p><a class="enroll" href="https://www.google.com/">Enroll today</a> for your first session free!</p>
+      <div class="benefit-grid">
+        <article class="card">
+          <h3>Personalized Path</h3>
+          <p>LMC matches you with the right instructor and level from day one.</p>
+        </article>
+        <article class="card">
+          <h3>World-Class Faculty</h3>
+          <p>Learn from performers, composers, and educators with esteeemed conservatory and university credentials.</p>
+        </article>
+        <article class="card">
+          <h3>Perform Often</h3>
+          <p>Monthly whole-studio classes and semester recitals build confidence and stage presence.</p>
+        </article>
+        <article class="card">
+          <h3>Flexible Scheduling</h3>
+          <p>We offer after-school, weekend, and online options to fit busy families.</p>
+        </article>
+      </div>
+      
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <details>
+        <summary>How soon will support reply?</summary>
+        <p>Within one business day.</p>
+      </details>
+      <details>
+        <summary>Can I reschedule a lesson?</summary>
+        <p>Yes, email us 24 hours in advance and we’ll offer our next available timeslot.</p>
+      </details>
+      <details>
+        <summary>Do you offer online lessons?</summary>
+        <p>No, programs are available only in-person.</p>
+      </details>
+      
+      <p><a class="enroll" href="#enroll-form">Enroll today</a> for your first session free!</p>
     </div>
 
     <div id="departments-page">
-      <h3>Departments: </h3>
-      <ul>
-        <li>Classical Music</li>
-        <li>Jazz</li>
-        <li>Contemporary Music</li>
-        <li>Music Theory</li>
-        <li>Music Education</li>
-      </ul>
+      <h3 class="mt-lg">Departments</h3>
+
+      <div class="departments-row">
+        <div class="departments-list">
+          <ul class="tags">
+            <li>Classical Piano</li><li>Jazz Piano</li><li>Strings</li><li>Winds</li>
+            <li>Voice</li><li>Percussion</li><li>Composition</li><li>Contemporary</li>
+            <li>Music Theory</li><li>Ear Training</li><li>Music Education</li><li>Ensembles</li>
+          </ul>
+        </div>
+
+        <div class="departments-image">
+          <img src="./istockphoto-921977202-612x612.webp" alt="picture of a piano, violin, and sheet music" width="600" height="400" loading="lazy"/>
+          <figcaption>String instrumentalist Jason playing during a semester recital.</figcaption>
+        </div>
+      </div>
     </div>
 
     <div id="schedule-page">
-      <h3>Schedule: </h3>
-      <p>View our upcoming events!</p>
-      <div class="calendar">
-        <img src="" alt="LMC Calendar of Events"/>
-    </div>
+      <h2 id="events-title">Upcoming Events</h2>
+      <ul class="event-list">
+        <li><time datetime="2025-11-15">Nov 15</time> Fall Recital — Main Hall</li>
+        <li><time datetime="2025-12-07">Dec 7</time> Masterclass: Brian Henderson on Contemporary Voice</li>
+        <li><time datetime="2026-01-12">Jan 12</time> New Student Orientation</li>
+      </ul>
+      <table class="calendar">
+        <caption>November 2025</caption>
+        <thead>
+          <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+          <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+          <tr><td>14</td><td>15<br><small>Fall Recital</small></td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+          <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+          <tr><td>28</td><td>29</td><td>30</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <div id="people-page">
-      <h3>Faculty and Students: </h3>
-      <p>Meet some of our talented faculty members and accomplished students who make LMC a vibrant community of musicians.</p>
-      <div profile-1>
-        <img src="" alt="Profile Picture of Frank Johnson"/>
-        <figcaption>Frank Johnson</figcaption>
+      <h2 id="faculty-title">Meet our esteemed faculty</h2>
+      <div class="people-grid">
+        <figure class="person">
+          <img src="./max-harlynking-zaItO-b0afs-unsplash.jpg" alt="Frank Johnson, Piano Faculty" width="320" height="320" loading="lazy" />
+          <figcaption>Frank Johnson, Piano</figcaption>
+        </figure>
+        <figure class="person">
+          <img src="./tim-mossholder-uicdmDWW9RQ-unsplash.jpg" alt="Ellie Wang, Violin Faculty" width="320" height="320" loading="lazy" />
+          <figcaption>Emma Tumblestone, Violin</figcaption>
+        </figure>
+        <figure class="person">
+          <img src="./batel-studio-ttSRjiYG_WM-unsplash.jpg" alt="Maya Amarada, Voice Faculty" width="320" height="320" loading="lazy" />
+          <figcaption>Maya Amarada, Voice</figcaption>
+        </figure>
+        <figure class="person">
+          <img src="./divyank-sachdeva-iQLqpFqzwnc-unsplash.jpg" alt="Ben Guzman, Jazz Saxophone Faculty" width="320" height="320" loading="lazy" />
+          <figcaption>Ben Guzman, Jazz Saxophone</figcaption>
+        </figure>
       </div>
-      <div profile-2>
-        <img src="" alt="Profile Picture of Ellie Wang"/>
-        <figcaption>Ellie Wang</figcaption>
-      </div>
-      <div profile-3>
-        <img src="" alt="Profile Picture of Maya Amarada"/>
-        <figcaption>Maya Amarada</figcaption>
-      </div>
-      <div profile-4>
-        <img src="" alt="Profile Picture of Ben Guzman"/>
-        <figcaption>Ben Guzman</figcaption>
-      </div>
-      <div profile-5>
-        <img src="" alt="Profile Picture of Natalie Rodriguez"/>
-        <figcaption>Natalie Rodriguez</figcaption>
-      </div>
+    </div>
+    
+    <div id="testimony-page">
+      <h2 id="testimony-title">What our students say</h2>
+      <div class="testimony-grid">
+        <blockquote class="testimony">
+          <p>"LMC has transformed my daughter's musical journey. The personalized instruction and supportive community have helped her grow both as a musician and as a person."</p>
+          <footer>— Sarah L., Parent</footer>
+        </blockquote>
+        <blockquote class="testimony">
+          <p>"The faculty at LMC are not only experts in their fields but also passionate educators. I've learned so much and feel inspired every time I attend a lesson."</p>
+          <footer>— David M., Student</footer>
+        </blockquote>
+        <blockquote class="testimony">
+          <p>"Performing in the recitals has boosted my confidence tremendously. LMC provides a nurturing environment that encourages growth and creativity."</p>
+          <footer>— Emily R., Student</footer>
+        </blockquote>
+    </div>
     </div>
 
-    <div id="home-page">
+  <div id="home-page">
       <h1 id="title">Lily's Music Conservatory</h1>
       <h3>Your journey to musical mastery starts here!</h3>
+      <p>Expert faculty. Personalized programs. First session is <strong>free</strong>.</p>
+      <ul class="proof-points" aria-label="Quick highlights">
+          <li>500+ active students</li>
+          <li>95% recital participation</li>
+          <li>12 departments</li>
+        </ul>
       <img id="image" src="./vladimir-wang-uIFS1rqYYWc-unsplash.jpg" alt="picture of elena and jollie at the piano"/>
-      <figcaption id="image">Students Elena and Jollie playing the piano</figcaption>
+      <figcaption id="image">LMC students Ella and Jollie playing the piano.</figcaption>
       <hr>
-    </div>
+  </div>
 
     <div id="endbody">
       <hr>
       <p>© 2025 Lily's Music Conservatory. All rights reserved.</p>
-      <p>Address: 1304 NineStreet Boulevard, Washington, New York, 11039</p>
+      <p>Address: 1304 NineStreet Boulevard, Washington, New York, 11039.</p>
+      <a href="mailto:support@lmcla.edu">support@lmcla.edu</a> ·
+      <a href="tel:+12135551234">(213) 555-1234</a>
     </div>
     
   </body>
