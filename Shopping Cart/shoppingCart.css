@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: rgb(151, 151, 255);
+}
+
+.page {
+  width: 100%;
+  max-width: 480px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #111827;
+}
+
+.item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 2px solid #3b82f6;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:disabled {
+  background: #9ca3af;
+  cursor: default;
+}
+
+.error {
+  margin-top: 4px;
+  color: #dc2626;  /* red */
+  height: 1em;
+  font-size: 0.85rem;
+}
+
+.cart {
+  margin-top: 20px;
+}
+
+#cart-list {
+  margin-top: 10px;
+  list-style: none;
+}
+
+#cart-list li {
+  padding: 8px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  margin-top: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.cart-message {
+  min-height: 1em;
+  margin: 6px 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}

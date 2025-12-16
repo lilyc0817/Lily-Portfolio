@@ -1,0 +1,21 @@
+img{
+    width: 40vw;
+    border-radius: 10px;
+}
+figure{
+    display: none;
+}
+body{
+    font-family: Georgia;
+}
+button {
+  background-color: rgb(217, 39, 69);
+  border-radius: 80%;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,167 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main game container */
+.game-container {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Header */
+header {
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: 0.1em;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Status panel */
+.status-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.word-box h2,
+.keyboard-panel h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #6b7280;
+}
+
+#word-display {
+  font-size: 2rem;
+  letter-spacing: 0.3em;
+  margin-top: 8px;
+}
+
+.info-box {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.message {
+  min-height: 1.2em;
+  font-weight: 600;
+}
+
+/* Keyboard */
+.keyboard-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.key {
+  padding: 8px 10px;
+  min-width: 32px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
+}
+
+.key:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.key.used {
+  background: #e5e7eb;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Controls */
+.controls-panel {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.reset-btn {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
+}
+
+.reset-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .game-container {
+    margin: 12px;
+    padding: 16px;
+  }
+
+  #word-display {
+    font-size: 1.6rem;
+    letter-spacing: 0.2em;
+  }
+
+  .keyboard {
+    gap: 6px;
+  }
+
+  .key {
+    padding: 6px 8px;
+    min-width: 28px;
+  }
+}

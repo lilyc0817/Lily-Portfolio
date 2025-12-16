@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Like Counter</title>
+  <link rel="stylesheet" href="like.css">
+</head>
+<body>
+  <main class="page">
+    <section class="post-card">
+      <header class="post-header">
+        <div class="avatar">A</div>
+        <div>
+          <h1 class="post-author">Awesome Coder</h1>
+          <p class="post-handle">@javascript_student</p>
+        </div>
+      </header>
+
+      <p class="post-text">
+        Just wrote my first DOM project using vanilla JavaScript! 🚀
+      </p>
+
+      <footer class="post-footer">
+        <button id="like-button" class="like-button" aria-label="Like this post">
+          <span id="heart-icon" class="heart">♡</span>
+        </button>
+
+        <span class="like-count-text">
+          <span id="like-count">0</span> likes
+        </span>
+      </footer>
+
+      <p id="status-message" class="status-message">
+        Click the heart to like this post.
+      </p>
+    </section>
+  </main>
+
+  <script src="like.js"></script>
+</body>
+</html>

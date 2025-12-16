@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Buzzfeed Quiz</title>
+    <link rel="stylesheet" href ="styles.css">
+</head>
+
+
+<body>
+
+    <h1>Spend The Holidays At Hogwarts And I'll Tell You What Harry Potter Professor You Are</h1>
+    <img src="./Albus-Dumbledore.avif" alt="Picture of Dumbledore">
+    <figcaption>It takes a great deal of courage to stand up to your enemies, but a great deal more to stand up to your friends - Professor Dumbledore
+    </figcaption>
+    <p></p>
+    <p id="previousResults"></p>
+    <p></p>
+    <button id="startButton">Start Quiz</button>
+
+    <div id="lastResult"></div>
+
+    <div id="result" style="display:none;">
+        <h2 id="resultTitle"></h2>
+        <p id="resultHouse"></p>
+        <p id="resultWand"></p>
+        <p id="resultPatronus"></p>
+    </div>
+    <div id="previousResultsDiv" style="display:none;">
+        <p></p>
+    </div>
+
+    <button id="restartButton">Restart</button>
+    <button id="previousResultsButton">See Previous Results</button>
+    <button id="clearResultsButton">Clear Previous Results</button>
+
+    <!--4 professors (mcgonagal, snape, trelawney, hagrid)-->
+    <figure id="q1">
+        <label >You are walking across campus, when it suddenly starts snowing. Do you </label>
+        <p></p>
+        <button id="q11">Organize a snowball tournament with your friends</button>
+        <button id="q12">Run inside and quietly watch the festivities from afar</button>
+        <button id="q13">Look for strange shapes in the snow</button>
+        <button id="q14">Sneak off to the forbidden forest to check on the creatures</button>
+    </figure>
+
+    <figure id="q2">
+        <label>After the day is over, you and your friends head to Hogsmeade to spend a cozy evening feasting and celebrating the end of your final exams. You find an open seat in the Three Broomsticks and sit down to order. Do you drink</label>
+        <p></p>
+        <button id="q21">Black tea with a hint of cinammon spice (not too strong but still pungent)</button>
+        <button id="q22">Some kind of suspicious liquid potion you swear is just for "research purposes"</button>
+        <button id="q23">A smokey, herbal brue that opens your "Inner Eye"</button>
+        <button id="q24">Extra foaming butterbeer with a side of more butterbeer</button>
+    </figure>
+
+    <figure id="q3"> 
+        <label>When you head back to Hogwarts, you see a glowing symbol in the snow. What does it mean to you?</label>
+        <p></p>
+        <button id="q31">Silly mischief from students practicing their Patronus</button>
+        <button id="q32">Nothing. Who believes in superstitions?</button>
+        <button id="q33">Death and Rebirth (the chosen one has come)</button>
+        <button id="q34">The dragon you raised testing out its powers</button>
+    </figure>
+
+
+    <figure id="q4">
+        <label>You arrive back in your dorm (finally). But you haven't decorated it yet and notice that it's a little drab. Do you put up</label>
+        <p></p>
+        <button id="q41">Elegant garlands, floating candles, and holiday ornaments</button>
+        <button id="q42">Dark, dramatic colors and a few ominous candles (absolutely no scents)</button>
+        <button id="q43">Heavy incense, star charts, and dream catchers</button>
+        <button id="q44">Cozy mismatched blankets, knitted stockings, and homemade ornaments</button>
+    </figure>
+
+    
+    <figure id="q5">
+        <label >It's the next day and surprise surprise, you still have to work :(. But Dumbledore asks you teach any class of your choosing. Do you </label>
+        <p></p>
+        <button id="q51">Transfigure ornaments into animals</button>
+        <button id="q52">Brew a complicated potion that most students will mess up</button>
+        <button id="q53">Read omens in tea leaves and melted candle wax</button>
+        <button id="q54">Care for a baby dragon that sneezes snow instead of sparks</button>
+    </figure>
+
+    <figure id="q6">
+        <label>The cheer is clear, but for those student still remaining at Hogwarts, the holidays can be a lonely time. You see a student crying in a staircase after class. Do you </label>
+        <p></p>
+        <button id="q61">Gently but firmly give them advice and remind them of their strengths</button>
+        <button id="q62">Awkwardly stand nearby, mutter a few sharp but helpful words, then leave</button>
+        <button id="q63">Tell them the stars foretell better days and make dramatic promises</button>
+        <button id="q64">Sit down and offer them a warm hug and baked treat</button>
+    </figure>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
