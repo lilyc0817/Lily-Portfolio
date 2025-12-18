@@ -1,7 +1,7 @@
 //make sure script loaded
 console.log("script loaded")
 
-//get start and end button elements from html
+//declare start and end button elements from html
 const startButton = document.getElementById("startButton");
 const lastResultDiv = document.getElementById("lastResult");
 const resultDiv = document.getElementById("result");
@@ -15,11 +15,12 @@ restartButton.style.display = "none";
 previousResultsButton.style.display = "none";
 clearResultsButton.style.display = "none";
 
-//get quiz answer elements from html
+//get quiz questions from html
 const questionIds = ["q1", "q2", "q3", "q4", "q5", "q6"];
+//declare each question option
 const questions = questionIds.map(id => document.getElementById(id));
 
-//keep track of current question
+//keep track of current question index
 let currentQuestionIndex = 0;
 
 //keep track of the user's score
@@ -30,7 +31,7 @@ const scores = {
   "Rubeus Hagrid": 0
 };
 
-//map question options to each professor
+//maps each question option to each professor
 const answerMap = {
   // q1
   q11: "Minerva McGonagall",  
@@ -87,13 +88,15 @@ function showQuestion(index){
 
 startButton.addEventListener("click", () => {
     //hide the start button
-    startButton.style.display = "none"; 
-    currentQuestionIndex = 0;           // start at first question
-    showQuestion(currentQuestionIndex); // show q1
+    startButton.style.display = "none";
+    // start at first question 
+    currentQuestionIndex = 0;  
+    // show q1         
+    showQuestion(currentQuestionIndex);
 });
 
 function answerClick(professorName){
-    //add one point to that professor after clicking on option
+    //add one point to that professor's score after clicking on option
     scores[professorName] += 1;
     //move onto the next question
     currentQuestionIndex += 1;
@@ -146,12 +149,12 @@ async function displayResult(){
         //fetch entire api
         const response = await fetch(`https://hp-api.onrender.com/api/characters/staff`);
         const professors = await response.json();
-        console.log(professors);
         
         //display house, wand, and patronus to the user
         resultDiv.style.display = "block";
         resultTitle.textContent = `You are most like: ${winner}!`;
         
+        //find the winning professor from the api
         const prof = professors.find(professor => professor.name === winner);
 
         if (prof.house){
@@ -168,6 +171,7 @@ async function displayResult(){
     catch(error){
         console.log("API Request Failed", error)
     }
+    //show buttons at the end
     restartButton.style.display = "block";
     previousResultsButton.style.display = "block";
     clearResultsButton.style.display = "block"
@@ -190,15 +194,11 @@ restartButton.addEventListener("click", () => {
     //3. display the first question again
     showQuestion(currentQuestionIndex);
 
-    //2. display the previous results (make a list that stores the previous result)
 })
 
 
 
-//IN-PROGRESS IDEAS
-
 //local storage: the user can see their past results 
-//local storage: the user can come back to their previous question if they exit the page and continue the quiz without restarting
 
 function loadResults(){
     const storedResults = localStorage.getItem("pastResults");
@@ -207,7 +207,7 @@ function loadResults(){
         previousResultsDiv.textContent = "No Results Yet!";
     }
     if (storedResults){
-        previousResultsDiv.style.display = "block"
+        previousResultsDiv.style.display = "block";
         const results = JSON.parse(storedResults);
         previousResultsDiv.textContent = results.join(", ")
     }
